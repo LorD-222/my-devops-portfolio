@@ -1,0 +1,24 @@
+.home-page {
+    text-align: center;
+}
+
+  /* Основной контент */
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.center-content {
+    flex: 2; /* Будет в два раза шире, чем боковые блоки */
+    display: flex;
+    justify-content: center; /* Центрирование изображения */
+    align-items: center;
+}
+
+.center-content img {
+    max-width: 1100%;
+    max-height: 500px;
+    /* box-shadow: 0 0 10px #0ff; */
+    filter: drop-shadow(0 0 5px cyan) drop-shadow(0 0 10px cyan) drop-shadow(0 0 15px cyan);
+}

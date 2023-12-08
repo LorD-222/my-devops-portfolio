@@ -1,0 +1,57 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #021026;
+  color: white;
+  text-shadow: 0 0 30px #FF00FF;
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff; /* Неоновое свечение */
+  margin-bottom: 30px;
+}
+
+.logo-left, .logo-right {
+  width: 130px; /* Или другой размер, который вам нужен */
+  height: 130px; /* Или другой размер, который вам нужен */
+  filter: drop-shadow(0 0 5px cyan) drop-shadow(0 0 10px cyan) drop-shadow(0 0 15px cyan);
+}
+
+.menu a {
+  margin: 0 20px;
+  font-size: 3rem; /* Увеличиваем размер текста */
+  color: #08F7FE; /* Неоновый синий цвет текста */
+  text-shadow: 0 0 30px #08F7FE;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: row; /* Сохраняем горизонтальное направление */
+    justify-content: space-between; /* Располагаем элементы по краям */
+    align-items: center; /* Выравниваем элементы по вертикали */
+  }
+
+  .logo-left, .logo-right {
+    /* При необходимости настроить размер изображений */
+    width: 100px; /* Пример размера */
+    height: 100px; /* Сохраняем пропорции */
+  }
+
+  .menu {
+    flex-grow: 1; /* Позволяет меню заполнять пространство между логотипами */
+    display: flex;
+    justify-content: center; /* Центрируем элементы меню */
+    align-items: center; /* Выравниваем элементы меню по вертикали */
+  }
+
+  .menu a {
+    padding: 0 10px; /* Отступ между элементами меню */
+    font-size: smaller; /* Регулируем размер шрифта по необходимости */
+    font-size: 1.5rem; /* Увеличиваем размер текста */
+  }
+}

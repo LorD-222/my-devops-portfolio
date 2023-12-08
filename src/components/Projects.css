@@ -1,0 +1,53 @@
+/* Стили для Projects */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    gap: 20px;
+    color: #08F7FE; /* Неоновый синий цвет текста */
+    text-shadow: 0 0 30px #08F7FE;
+    margin-top: 30px; /* Значение отступа соответствует отступу от Navigation */
+    margin-bottom: 30px; /* Это значение установит одинаковый отступ до Footer */
+    
+}
+
+.project {
+  flex-basis: calc(20% - 40px); /* 33.33% для трех блоков в ряд, -40px учитывая gap в 20px с обеих сторон */
+  max-width: calc(20% - 40px); /* Аналогично flex-basis */
+  margin: 15px; /* Отступы для блоков проектов */
+  border-radius:20px; /* Скругление углов */
+  color: #08F7FE; /* Неоновый синий цвет текста */
+  text-shadow: 0 0 30px #08F7FE;
+}
+
+.project a {
+  margin: 0 20px;
+  font-size: 3rem; /* Увеличиваем размер текста */
+  color: #08F7FE; /* Неоновый синий цвет текста */
+  text-shadow: 0 0 30px #08F7FE;
+}
+
+.projects div {
+  background-color: #02073C; /* Слегка более светлый фон для карточек проектов */
+  padding: 100px;
+  border-radius: 50px;
+  box-shadow: 0 0 50px #0000FF; /* Неоновая тень */
+  font-size: 3rem; /* Увеличиваем размер текста */
+  
+}
+
+/* Медиа-запрос для меньших экранов */
+@media (max-width: 768px) {
+  .project {
+    flex-basis: calc(50% - 40px); /* 50% чтобы было два блока в ряд */
+    max-width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .project {
+    flex-basis: 100%; /* 100% чтобы блоки шли один под другим */
+    max-width: 100%;
+  }
+}
