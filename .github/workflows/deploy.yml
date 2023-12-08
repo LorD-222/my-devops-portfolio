@@ -25,15 +25,15 @@ jobs:
 
     - name: Stop and remove the current container
       run: |
-        sudo docker stop my_devops_portfolio || true
-        sudo docker rm my_devops_portfolio || true
+        docker stop my_devops_portfolio || true
+        docker rm my_devops_portfolio || true
 
     - name: Pull latest image of my-devops-portfolio
-      run: sudo docker pull lord222/my-devops-portfolio:latest
+      run: docker pull lord222/my-devops-portfolio:latest
 
     - name: Recreate my-devops-portfolio container
       run: |
-        sudo docker run -d \
+        docker run -d \
           --name my_devops_portfolio \
           -p 3001:80 \
           --restart always \
